@@ -1,14 +1,14 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, ScrollView, Image} from 'react-native';
-import {IconSvgLogo} from "../assets/icons/IconSvgLogo";
-import IconSvgPlus from "../assets/icons/IconSvgPlus";
-import {IconSvgMessage} from "../assets/icons/IconSvgMessage";
-import {IconSvgFavorite} from "../assets/icons/IconSvgFavorite";
-import {TextHelper} from "../helpers/TextHelper";
-import {PostCard} from "../UI/PostCard";
-import {HistoryData} from "../store/HistoryData";
-import {HistoryHelper} from "../helpers/HistoryHelper";
-import {IHistory} from "../tipes/HIstoryTypes";
+import {IconSvgLogo} from "../../assets/icons/IconSvgLogo";
+import IconSvgPlus from "../../assets/icons/IconSvgPlus";
+import {IconSvgMessage} from "../../assets/icons/IconSvgMessage";
+import {IconSvgFavorite} from "../../assets/icons/IconSvgFavorite";
+import {TextHelper} from "../../helpers/TextHelper";
+import {PostCard} from "../../UI/PostCard";
+import {HistoryData} from "../../store/HistoryData";
+import {HistoryHelper} from "../../helpers/HistoryHelper";
+import {IHistory} from "../../tipes/HIstoryTypes";
 
 
 export const HomeScreen = () => {
