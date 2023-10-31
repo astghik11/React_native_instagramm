@@ -1,26 +1,22 @@
 import React from 'react';
 import {
   SafeAreaView,
-  StyleSheet,
-  Text,
 } from 'react-native';
+import {Navigator} from "./src/navigation/Navigator";
+import {NavigationContainer} from "@react-navigation/native";
+import {AppStack} from "./src/navigation/stack/AppStack";
 import {HomeScreen} from "./src/screens/HomeScreen";
-import {SearchScreen} from "./src/screens/SearchScreen";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
 
 
 function App(): JSX.Element {
 
   return (
-    <SafeAreaView>
-      {/*<HomeScreen/>*/}
-      <SearchScreen/>
-    </SafeAreaView>
+      <SafeAreaView style={{flex: 1}}>
+        <Navigator/>
+      </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-
-});
 
 export default App;

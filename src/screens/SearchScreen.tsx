@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
+import {View, Image, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
 import {DataHelper} from "../helpers/DataHelper";
 
 export const SearchScreen = () => {
