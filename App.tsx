@@ -5,6 +5,7 @@ import {
   Text,
 } from 'react-native';
 import {HomeScreen} from "./src/screens/HomeScreen";
+import {SearchScreen} from "./src/screens/SearchScreen";
 
 
 
@@ -12,7 +13,8 @@ function App(): JSX.Element {
 
   return (
     <SafeAreaView>
-      <HomeScreen/>
+      {/*<HomeScreen/>*/}
+      <SearchScreen/>
     </SafeAreaView>
   );
 }
