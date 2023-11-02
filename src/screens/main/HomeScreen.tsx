@@ -6,7 +6,7 @@ import {IconSvgMessage} from "../../assets/icons/IconSvgMessage";
 import {IconSvgFavorite} from "../../assets/icons/IconSvgFavorite";
 import {TextHelper} from "../../helpers/TextHelper";
 import {PostCard} from "../../UI/PostCard";
-import {HistoryData} from "../../store/HistoryData";
+import {HistoryData} from "../../moduls/history/HistoryData";
 import {HistoryHelper} from "../../helpers/HistoryHelper";
 import {IHistory} from "../../tipes/HIstoryTypes";
 

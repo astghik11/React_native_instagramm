@@ -3,7 +3,7 @@ import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {Screens} from "../screens/Screens";
 import {BottomTab} from "../tab/BottomTab";
 
-export const AppStack = () => {
+export const MainStack = () => {
     const Stack = createNativeStackNavigator();
 
     return (

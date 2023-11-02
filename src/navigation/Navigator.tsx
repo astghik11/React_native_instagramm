@@ -1,11 +1,13 @@
 import React from 'react';
 import {NavigationContainer} from "@react-navigation/native";
-import {AppStack} from "./stack/AppStack";
+import {MainStack} from "./stack/MainStack";
+import {AuthScreen} from "../screens/auth/AuthScreen";
 
 export const Navigator = () => {
+    const isAuth = false;
     return(
         <NavigationContainer>
-            <AppStack/>
+            {isAuth ? <MainStack/> : <AuthScreen/>}
         </NavigationContainer>
     )
 }
