@@ -10,8 +10,13 @@ import {IconSvgProfile} from "../../assets/icons/IconSvgProfile";
 import {DataHelper} from "../../helpers/DataHelper";
 import {launchImageLibrary} from "react-native-image-picker";
 import {IPhoto} from "../../tipes/Photo";
+import {observer} from "mobx-react";
+import {useRootStore} from "../../base/hooks/useRootStore";
 
-export const ProfileScreen = () => {
+export const ProfileScreen = observer(() => {
+
+    const {authStore} = useRootStore()
+
     const exPhoto = 'https://images.unsplash.com/photo-1497316730643-415fac54a2af?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     const [photos,setPhotos]  = useState<IPhoto[]>([]);
 
@@ -49,8 +54,8 @@ export const ProfileScreen = () => {
                             <IconSvgPlus/>
                         </TouchableOpacity>
 
-                        <TouchableOpacity>
-                            <IconSvgMenu/>
+                        <TouchableOpacity onPress={() => authStore.logout()}>
+                            <Text>Logout</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -119,7 +124,7 @@ export const ProfileScreen = () => {
             </View>
         </ScrollView>
     )
-}
+})
 const styles = StyleSheet.create({
     topContainer: {
         flexDirection: 'row',

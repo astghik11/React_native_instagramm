@@ -1,7 +1,19 @@
 import {Api} from "../../base/axios";
+import {ILoginRequest} from "./AuthTypes";
+import {AxiosResponse} from "axios";
 
 export default class AuthApi {
-   login = (data: any) => {
-       return Api.post('/login', data)
-   }
+   login = (data: ILoginRequest) => {
+       // return Api.post('/login', data)
+       return {data: {token: 'TOKEN'}}
+   };
+
+    logout = () => {
+        // return Api.post('/logout', data)
+        return {data: {isSuccess: true}}
+    };
+
+    // getPosts = async (): Promise<AxiosResponse<IPost[]>> => {
+    //   return await Api.get('/posts');
+    // };
 }

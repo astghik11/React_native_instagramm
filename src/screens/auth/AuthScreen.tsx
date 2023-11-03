@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {StyleSheet, Text, TextInput, View} from "react-native";
 import IconSvgAuthLogo from "../../assets/auth/IconSvgAuthLogo";
 import {DataHelper} from "../../helpers/DataHelper";
@@ -9,6 +9,7 @@ import {useForm} from "react-hook-form";
 
 import {observer} from "mobx-react";
 import {useRootStore} from "../../base/hooks/useRootStore";
+import {LoaderFlex} from "../../components/auth/Loader";
 
 export const AuthScreen = observer(() => {
     const {authStore} = useRootStore();
@@ -22,9 +23,14 @@ export const AuthScreen = observer(() => {
         authStore.login(data)
     };
 
+    if(authStore.loader){
+        return <LoaderFlex/>
+    }
+
     return(
         <View style={styles.container}>
             <IconSvgAuthLogo/>
+
             <View style={{marginTop: 20}}>
                 <AuthInput
                     name={'username'}
@@ -41,12 +47,10 @@ export const AuthScreen = observer(() => {
                     rules={{required: 'Password is required', minLength: {value:3, message: 'Password should be minimum 3 characters long'}}}
                 />
 
-                <AuthButton title={'Log In'} onPress={handleSubmit(sendData)}
-                />
+                <AuthButton title={'Log In'} onPress={handleSubmit(sendData)}/>
             </View>
 
-
-        </View>
+         </View>
     )
 });
 
